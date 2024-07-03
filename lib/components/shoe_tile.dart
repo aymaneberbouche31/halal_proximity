@@ -22,7 +22,7 @@ class ShoeTile extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
                 child: Image.asset(
                   shoe.imagePath,
-                  height: 230,
+                  height: 210,
                   fit: BoxFit.cover,
                   width: double.infinity,
                 )),

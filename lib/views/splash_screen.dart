@@ -23,7 +23,7 @@ late Future<void> _initializeVideoPlayerFuture;
 
 _controller.addListener(() {
       if (_controller.value.position == _controller.value.duration) {
-        Navigator.of(context).pushReplacementNamed('/ecom');
+        Navigator.of(context).pushReplacementNamed('/login');
       }
     });
 

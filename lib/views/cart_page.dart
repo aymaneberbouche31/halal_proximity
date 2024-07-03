@@ -19,7 +19,7 @@ class _CartPageState extends State<CartPage> {
       builder: (context, value, child) => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
         child: Column(children: [
-          const Text('My cart', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)
+          const Text('Mon Panier', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24)
           ),
           const SizedBox(height: 10),
           Expanded(child: ListView.builder(

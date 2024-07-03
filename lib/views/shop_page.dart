@@ -21,8 +21,8 @@ class _ShopPageState extends State<ShopPage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: Text('Successfully added!'),
-        content: Text('Check your cart'),
+        title: Text('Bien ajouté!'),
+        content: Text('Regardez votre panier'),
       ),
     );
   }
@@ -50,8 +50,9 @@ class _ShopPageState extends State<ShopPage> {
         // message
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 25.0),
-          child: Text('everyone flies.. some fly longer than others',
-              style: TextStyle(color: Colors.grey[600])),
+          child: Text("Tout le monde vole... certains volent plus longtemps que d'autres.",
+              style: TextStyle(color: Colors.grey[600]), 
+              textAlign: TextAlign.center),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -67,7 +68,7 @@ class _ShopPageState extends State<ShopPage> {
                 ),
               ),
               Text(
-                "See all",
+                "Voir tout",
                 style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
               )
             ],

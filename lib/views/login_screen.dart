@@ -19,7 +19,7 @@ Future<void> login(BuildContext context) async {
         SnackBar(content: Text(authViewModel.errorMessage!)),
       );
     } else {
-      Navigator.of(context).pushReplacementNamed('/home');  // Navigate to home or login screen
+      Navigator.of(context).pushReplacementNamed('/ecom');  // Navigate to home or login screen
     }
   }
 
