@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "218647353551",
+    "project_id": "fir-auth-cf8c2",
+    "storage_bucket": "fir-auth-cf8c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218647353551:android:868e285601b344e6343fba",
+        "android_client_info": {
+          "package_name": "com.example.halal_proximity"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5fO0afaQ64RydmMhqux5oRxIqFkAfQv0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
