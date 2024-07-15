@@ -107,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Colors.white,
                           ),
                           title: Text(
-                            'Home',
+                            'Accueil',
                             style: TextStyle(color: Colors.white),
                           ))),
 
@@ -119,7 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Colors.white,
                           ),
                           title: Text(
-                            'About',
+                            'Informations',
                             style: TextStyle(color: Colors.white),
                           ))),
                 ],
@@ -132,7 +132,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.white,
                     ),
                     title: Text(
-                      'Logout',
+                      'Deconnexion',
                       style: TextStyle(color: Colors.white),
                     ),
                     onTap: () {

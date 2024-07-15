@@ -41,7 +41,7 @@ class _ShopPageState extends State<ShopPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: const [
-              Text('Search', style: TextStyle(color: Colors.grey)),
+              Text('Rechercher', style: TextStyle(color: Colors.grey)),
               Icon(Icons.search, color: Colors.grey),
             ],
           ),

@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:halal_proximity/models/cart.dart';
 import 'package:halal_proximity/viewmodels/authentification_viewmodel.dart';
 import 'package:halal_proximity/views/splash_screen.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create: (context)=>Cart(),
-      builder: (context, child)=> MaterialApp(
+      builder: (context, child)=> GetMaterialApp(
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRouter.generateRoute,
       )

@@ -30,23 +30,27 @@ class RegisterScreen extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [
-                Color.fromARGB(255, 104, 98, 86),
-                Color.fromARGB(255, 166, 168, 159),
-              ],
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(0.5),
-                spreadRadius: 5,
-                blurRadius: 7,
-                offset: Offset(0, 3),
-              ),
-            ],
-          ),
+    // Dégradé de couleurs
+    gradient: LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [
+        Color.fromARGB(255, 69, 117, 118),
+         Color.fromARGB(255, 166, 168, 159),
+         // Couleur de départ
+        // Couleur de fin
+      ],
+    ),
+    // Ombre
+    boxShadow: [
+      BoxShadow(
+        color: Colors.black.withOpacity(0.5), // Couleur de l'ombre
+        spreadRadius: 5, // Étendue de l'ombre
+        blurRadius: 7, // Flou de l'ombre
+        offset: Offset(0, 3), // Décalage de l'ombre
+      ),
+    ],
+  ),
           child: SingleChildScrollView(
             child: Center(
               child: Column(
@@ -76,7 +80,7 @@ class RegisterScreen extends StatelessWidget {
                   const SizedBox(height: 10),
                   MyTextField(
                     controller: passwordController,
-                    hintText: 'Password',
+                    hintText: 'Mot de passe',
                     obscureText: true,
                   ),
                   const SizedBox(height: 25),
@@ -89,7 +93,7 @@ class RegisterScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'Already have an account?',
+                        'Déja un compte ?',
                         style: TextStyle(color: Colors.white),
                       ),
                       const SizedBox(width: 4),
@@ -98,7 +102,7 @@ class RegisterScreen extends StatelessWidget {
                           Navigator.pop(context);
                         },
                         child: const Text(
-                          'Login now',
+                          'Se connecter',
                           style: TextStyle(
                             color: Colors.blue,
                             fontWeight: FontWeight.bold,

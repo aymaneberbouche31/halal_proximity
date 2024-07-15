@@ -59,4 +59,20 @@ Future<void> login({required String email, required String password}) async {
       errorMessage = _authenticationService.errorMessage ?? e.toString();
     }
   }
+
+    Future<void> signInWithGoogle() async {
+    try {
+      await _authenticationService.signInWithGoogle();
+      notifyListeners();
+    } catch (e) {
+      notifyListeners();
+      rethrow;
+    }
+  }
+
+  Future<void> signOutWithGoogle() async {
+    await _authenticationService.signOut();
+    notifyListeners();
+  }
+
 }

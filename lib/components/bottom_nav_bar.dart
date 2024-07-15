@@ -21,11 +21,11 @@ class MyBottomNavBar extends StatelessWidget {
         tabs: const[
           GButton(
           icon : Icons.home,
-          text : "Shop",
+          text : "Catalogue",
       ),
       GButton(
         icon: Icons.shopping_bag_rounded,
-        text: 'Cart',
+        text: 'Panier',
       )
         ]
       ),
