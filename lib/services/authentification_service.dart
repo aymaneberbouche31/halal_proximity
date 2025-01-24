@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get_utils/get_utils.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:halal_proximity/utils/firebase_error_helper.dart';
 
 class AuthenticationService {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
@@ -19,22 +21,26 @@ class AuthenticationService {
   Stream<User?> get authStateChanges => _firebaseAuth.authStateChanges();
 
   // Login with email and password
-  Future<UserCredential?> login({required String email, required String password}) async {
+  Future<UserCredential?> login(
+      {required String email, required String password}) async {
     try {
-      return await _firebaseAuth.signInWithEmailAndPassword(email: email, password: password);
+      return await _firebaseAuth.signInWithEmailAndPassword(
+          email: email, password: password);
     } on FirebaseAuthException catch (e) {
-      _errorMessage = e.message;
-      throw e;
+      String errorMessage = FirebaseErrorHelper.getErrorMessage(e.code);
+      throw Exception(errorMessage);
     } catch (e) {
       _errorMessage = e.toString();
-      throw e;
+      throw Exception(_errorMessage);
     }
   }
 
   // Create a new user with email and password
-  Future<UserCredential> createUserWithEmailAndPassword({required String email, required String password}) async {
+  Future<UserCredential> createUserWithEmailAndPassword(
+      {required String email, required String password}) async {
     try {
-      return await _firebaseAuth.createUserWithEmailAndPassword(email: email, password: password);
+      return await _firebaseAuth.createUserWithEmailAndPassword(
+          email: email, password: password);
     } on FirebaseAuthException catch (e) {
       _errorMessage = e.message;
       throw e;
@@ -64,7 +70,8 @@ class AuthenticationService {
         return null; // The user canceled the sign-in
       }
 
-      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+      final GoogleSignInAuthentication googleAuth =
+          await googleUser.authentication;
       final AuthCredential credential = GoogleAuthProvider.credential(
         accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
@@ -84,4 +91,12 @@ class AuthenticationService {
   Future<void> disconnectGoogle() async {
     await _googleSignIn.disconnect();
   }
+
+    // Écouter les changements d'état de l'utilisateur
+  void listenToAuthStateChanges(Function(User?) onAuthStateChanged) {
+    _firebaseAuth.authStateChanges().listen((User? user) {
+      onAuthStateChanged(user);
+    });
+  }
+
 }

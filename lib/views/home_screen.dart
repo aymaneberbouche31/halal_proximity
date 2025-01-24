@@ -5,7 +5,11 @@ import 'package:halal_proximity/views/shop_page.dart';
 import 'package:provider/provider.dart';
 import 'package:halal_proximity/viewmodels/authentification_viewmodel.dart';
 
-import '../services/authentification_service.dart';
+/* L'écran principal (HomeScreen) contient deux sections principales accessibles via une barre de navigation en bas :
+
+ShopPage : Une page où l'utilisateur peut consulter et ajouter des produits au panier.
+CartPage : La page du panier.
+ */
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

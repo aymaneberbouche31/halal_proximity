@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 import '../models/cart.dart';
 import '../models/shoe.dart';
 
+/*  La page du panier liste tous les produits ajoutés par l'utilisateur et leur permet de les consulter ou de les supprimer.*/
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
 
@@ -15,6 +16,7 @@ class CartPage extends StatefulWidget {
 class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
+    /* Utilise Consumer<Cart> pour écouter les modifications de l'état du panier (Cart). */
     return Consumer<Cart>(
       builder: (context, value, child) => Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -25,9 +27,7 @@ class _CartPageState extends State<CartPage> {
           Expanded(child: ListView.builder(
             itemCount: value.getUserCart().length,
             itemBuilder: (context, index){
-            // get individual shoe
             Shoe individualShoe = value.getUserCart()[index];
-            // return the cart item
             return CartItem(shoe: individualShoe);
           }))
         ],)

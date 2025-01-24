@@ -7,12 +7,12 @@ class Cart extends ChangeNotifier {
     Shoe(
         name: 'Dunk Low ',
         price: '220',
-        imagePath: 'assets/images/nike_rose.png',
+        imagePath: 'assets/images/airmaxplus.png',
         description: 'Nike Dunk Low Premium'),
     Shoe(
         name: 'Zoom FREAK',
         price: '236',
-        imagePath: 'assets/images/zoom.png',
+        imagePath: 'assets/images/hhh.jpg',
         description: 'Zoom FREAK'),
     Shoe(
         name: 'Air Jordan',

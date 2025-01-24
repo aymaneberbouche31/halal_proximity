@@ -1,0 +1,19 @@
+-----------------------
+AuthenticationService :
+Le rôle de la classe AuthenticationService est de gérer toutes les interactions avec Firebase, telles que :
+- Authentification (connexion/déconnexion).
+- Écoute des changements d'état via authStateChanges.
+- Gestion des erreurs liées à Firebase.
+
+Cela permet de centraliser et de isoler la logique métier spécifique à Firebase, ce qui rend votre code plus facile à maintenir et à mettre à jour.
+
+-----------------------
+Provider : Utilisé pour injecter et partager l'état ou la logique métier
+(via AuthenticationViewModel) dans toute notre application. 
+
+Provider est souvent utilisé pour des données qui doivent être accessibles à travers plusieurs écrans ou widgets dans l'application. 
+Par exemple :
+
+Les informations sur l'utilisateur connecté.
+Les paramètres globaux de l'application (comme le thème ou la langue).
+Les données partagées entre plusieurs écrans, comme le contenu d'un panier d'achat.

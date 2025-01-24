@@ -1,0 +1,11 @@
+{
+    "user-not-found": "Utilisateur introuvable.",
+    "wrong-password": "Mot de passe incorrect.",
+    "email-already-in-use": "Cette adresse email est déjà utilisée.",
+    "weak-password": "Le mot de passe est trop faible.",
+    "invalid-email": "Adresse email invalide.",
+    "invalid-credential": "Les identifiants sont incorrects",
+    "default-error": "Une erreur est survenue. Veuillez réessayer.",
+    "login": "Se connecter",
+    "success-login": "Connexion réussie."
+  }

@@ -5,6 +5,7 @@ import 'package:provider/provider.dart';
 
 import '../models/cart.dart';
 
+/* Une page où l'utilisateur peut consulter et ajouter des produits au panier */
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
 
@@ -47,13 +48,6 @@ class _ShopPageState extends State<ShopPage> {
           ),
         ),
 
-        // message
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 25.0),
-          child: Text("Tout le monde vole... certains volent plus longtemps que d'autres.",
-              style: TextStyle(color: Colors.grey[600]), 
-              textAlign: TextAlign.center),
-        ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25.0),
           child: Row(
