@@ -84,7 +84,7 @@ class AuthenticationService {
     } catch (e) {
       _errorMessage = e.toString();
       throw e;
-    }
+    } 
   }
 
   // Disconnect Google account
@@ -98,5 +98,23 @@ class AuthenticationService {
       onAuthStateChanged(user);
     });
   }
+
+  Future<void> checkTokenRevocation(Function onRevoked, Function onValid) async {
+  try {
+    // Force une vérification du token auprès de Firebase
+    await _firebaseAuth.currentUser?.getIdToken(true);
+    // Si aucune exception, le token est valide
+    onValid();
+  } catch (e) {
+    // Si une exception est levée, vérifier si le token est révoqué
+    if (e is FirebaseAuthException) {
+      onRevoked();
+      String errorMessage = FirebaseErrorHelper.getErrorMessage(e.code);
+      throw Exception(errorMessage);
+    } else {
+      rethrow;
+    }
+  }
+}
 
 }

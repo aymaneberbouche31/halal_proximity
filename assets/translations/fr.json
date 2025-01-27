@@ -7,5 +7,6 @@
     "invalid-credential": "Les identifiants sont incorrects",
     "default-error": "Une erreur est survenue. Veuillez réessayer.",
     "login": "Se connecter",
-    "success-login": "Connexion réussie."
+    "success-login": "Connexion réussie.",
+    "session_expired_message": "Votre session a expiré. Veuillez vous reconnecter."
   }

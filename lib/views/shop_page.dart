@@ -71,7 +71,8 @@ class _ShopPageState extends State<ShopPage> {
         const SizedBox(height: 10),
 
         // List of shoes for sale
-        Expanded(
+        Container(
+          height: 355,
           child: Consumer<Cart>(
             builder: (context, value, child) {
               return ListView.builder(

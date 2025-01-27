@@ -14,6 +14,8 @@ class AuthenticationViewModel extends ChangeNotifier {
     });
   }
 
+AuthenticationService get authenticationService => _authenticationService;
+
   User? _currentUser;
 
   User? get currentUser => _currentUser;
